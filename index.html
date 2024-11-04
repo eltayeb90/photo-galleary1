@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main">
+        <section class="galary_container">
+            <h1>photo galary</h1>
+            <div class="imgchoosen" id="choos">
+                <img src="./images/r1.jpg" alt="router" id="choosenimg">
+                <span onclick="closeChoosen()">X</span>
+            </div>
+            <span class="left">&lt;</span>
+            <div class="photo_container">
+                <img src="./images/r1.jpg" alt="router device" width="300" height="340" onclick="openChoosen(this.src)">
+                <img src="./images/r2.jpg" onclick="openChoosen(this.src)" alt="router device" width="300" height="340">
+                <img src="./images/r3.jpg" onclick="openChoosen(this.src)" alt="router device" width="300" height="340">
+                <img src="./images/r4.jpg" onclick="openChoosen(this.src)" alt="router device" width="300" height="340">
+                <img src="./images/r5.jpg" onclick="openChoosen(this.src)" alt="router device" width="300" height="340">
+                <img src="./images/s1.jpg" onclick="openChoosen(this.src)" alt="switch" width="300" height="340">
+                <img src="./images/diagram1.jpg" onclick="openChoosen(this.src)" alt="diagram" width="300" height="340">
+            </div>
+            <span class="right">&gt;</span>
+            <div class="dots_container">
+                <div class="dot">
+                    
+                </div>
+                <div class="dot">
+
+                </div>
+                <div class="dot">
+
+                </div>
+                <div class="dot">
+
+                </div>
+                <div class="dot">
+
+                </div>
+                <div class="dot">
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        var choos = document.getElementById("choos")
+        var choosenimg = document.getElementById("choosenimg")
+
+      function  openChoosen(pic){
+        choos.style.display = "flex";
+        choosenimg.src = pic;
+      }
+
+
+      function closeChoosen(){
+        choos.style.display = "none";
+      }
+    </script>
+</body>
+</html>
